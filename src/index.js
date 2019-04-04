@@ -1,14 +1,22 @@
 import React, { Component } from 'react'
-import { Platform, SafeAreaView, StyleSheet, Text, View } from 'react-native';
-import { Fonts } from './Utils/Fonts'
+import { SafeAreaView, StyleSheet, View } from 'react-native';
+
+import Text from './Components/Text'
 
 export default class App extends Component {
   render() {
     return (
       <SafeAreaView style={styles.safe}>
-        <View style={styles.container}>
+        <View style={styles.title}>
           <Text style={styles.instructions}>멍이의 일상</Text>
-          <Text style={styles.text}>반가워요~</Text>
+        </View>
+        <View style={styles.container}>
+          <Text style={{fontSize: 24, color: '#222'}}>
+            반가워요~
+          </Text>
+          <Text style={{fontSize: 24, color: '#222'}}>
+            멍이의 일상을 보여드립니다~
+          </Text>
         </View>
       </SafeAreaView>
     );
@@ -20,43 +28,23 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#efefef",
   },
+  title: {
+    height: 60,
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+    backgroundColor: 'rgba(135, 179, 171, 0.51)',
+  },
   container: {
     flex: 1,
-    justifyContent: 'flex-start',
     alignItems: 'center',
     backgroundColor: '#fff',
   },
   instructions: {
-    ...Platform.select({
-      ios: {
-        fontFamily: Fonts.BMDOHYEON,
-        fontWeight: '400',
-        fontStyle: 'normal',
-      },
-      android: {
-        fontFamily: Fonts.BMDOHYEON,
-        fontWeight: '400',
-        fontStyle: 'normal',
-      }
-    }),
-    fontSize: 44,
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-  text: {
-    ...Platform.select({
-      ios: {
-        fontFamily: Fonts.BMDOHYEON,
-        fontWeight: '400',
-        fontStyle: 'normal',
-      },
-      android: {
-        fontFamily: Fonts.BMDOHYEON,
-        fontWeight: '400',
-        fontStyle: 'normal',
-      }
-    }),
+    flex: 1,
     fontSize: 24,
-  }
+    justifyContent: 'center',
+    textAlign: 'center',
+    lineHeight: 60,
+    color: '#515151',
+  },
 });
