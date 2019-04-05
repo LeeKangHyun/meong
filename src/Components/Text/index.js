@@ -1,6 +1,6 @@
 import React from 'react'
 import { Platform, Text, StyleSheet } from 'react-native'
-import { Fonts } from '../../Utils/Fonts'
+import { Fonts } from '@/Utils/Fonts'
 
 export default ({ children, style }) => {
   return (
@@ -10,14 +10,7 @@ export default ({ children, style }) => {
 
 const styles = StyleSheet.create({
   text: {
-    ...Platform.select({
-      android: {
-        fontFamily: 'BMDOHYEON'
-      },
-      ios: {
-        fontFamily: Fonts.BMDOHYEON
-      }
-    }),
+    fontFamily: Fonts.BMDOHYEON,
     fontSize: 40,
     fontWeight: '400',
   }

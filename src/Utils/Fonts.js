@@ -1,4 +1,12 @@
+import { Platform } from 'react-native'
+
 export const Fonts = {
-  BMHANNA: "BMHANNAPro",
-  BMDOHYEON: "BMDoHyeon",
+  BMHANNA: Platform.select({
+    ios: 'BMHANNAPro',
+    android: 'BMHANNA'
+  }),
+  BMDOHYEON: Platform.select({
+    ios: 'BMDoHyeon',
+    android: 'BMDOHYEON'
+  }),
 }
