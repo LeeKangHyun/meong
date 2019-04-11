@@ -1,22 +1,21 @@
 // @flow
 import React, { Component } from 'react'
-import { SafeAreaView, StyleSheet } from 'react-native';
+// import { Provider } from 'react-redux'
 
-import Home from './Pages/Home'
+import Route from './config/route'
+// import initStore from '@/Store'
+// import rootSaga from '@/Store/Sagas'
+
+// const store = initStore()
+// store.runSaga(rootSaga)
 
 export default class App extends Component {
   render() {
-    return (
-      <SafeAreaView style={styles.safe}>
-        <Home />
-      </SafeAreaView>
-    );
+    return <Route />
+    /*return (
+      <Provider store={store}>
+        <Route />
+      </Provider>
+    )*/
   }
 }
-
-const styles = StyleSheet.create({
-  safe: {
-    flex: 1,
-    backgroundColor: "#fff",
-  },
-});
