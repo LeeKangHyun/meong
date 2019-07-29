@@ -3,7 +3,7 @@ import { View, Button } from 'react-native'
 
 import Image from '@/Components/ImagesComponent'
 
-import Content from './Components/Content'
+import Content from './Component/Content'
 
 const BtnView = ({ children }) => {
   return (
@@ -16,7 +16,7 @@ const BtnView = ({ children }) => {
       bottom: 30,
       alignSelf: "center",
       justifyContent: "center",
-      backgroundColor: "rgba(,0.22)"
+      backgroundColor: "rgba(0, 0, 0, 0.22)"
     }}>
       {children}
     </View>

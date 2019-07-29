@@ -1,17 +1,14 @@
 import React from 'react'
-import { Platform, Text, StyleSheet } from 'react-native'
+import styled from 'styled-components/native'
+
 import { Fonts } from '@/Utils/Fonts'
 
-export default ({ children, style }) => {
-  return (
-    <Text style={{ ...styles.text, ...style }}>{children}</Text>
-  )
-}
+export const Text = styled.Text`
+  font-family: ${Fonts.BMDOHYEON};
+  font-size: 40px;
+  font-weight: 400;
+`
 
-const styles = StyleSheet.create({
-  text: {
-    fontFamily: Fonts.BMDOHYEON,
-    fontSize: 40,
-    fontWeight: '400',
-  }
-})
+export default ({ children }) => {
+  return <Text>{children}</Text>
+}

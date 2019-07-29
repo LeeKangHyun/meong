@@ -1,13 +1,21 @@
 module.exports = {
   presets: ['module:metro-react-native-babel-preset'],
+  ignore: [
+    "node_modules"
+  ],
   plugins: [
     [
       "styled-components"
     ],
     [
-      "babel-plugin-root-import", {
-        rootPathPrefix: '@',
-        rootPathSuffix: 'src'
+      "babel-plugin-root-import",
+      {
+        paths: [
+          {
+            rootPathPrefix: '@',
+            rootPathSuffix: 'src'
+          }
+        ]
       }
     ]
   ],
@@ -18,9 +26,14 @@ module.exports = {
           "styled-components"
         ],
         [
-          "babel-plugin-root-import", {
-            rootPathPrefix: '@',
-            rootPathSuffix: 'src'
+          "babel-plugin-root-import",
+          {
+            paths: [
+              {
+                rootPathPrefix: '@',
+                rootPathSuffix: 'src'
+              }
+            ]
           }
         ]
       ]
