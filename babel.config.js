@@ -8,6 +8,9 @@ module.exports = {
       "styled-components"
     ],
     [
+      "@babel/plugin-proposal-class-properties"
+    ],
+    [
       "babel-plugin-root-import",
       {
         paths: [
@@ -18,25 +21,5 @@ module.exports = {
         ]
       }
     ]
-  ],
-  env: {
-    production: {
-      plugins: [
-        [
-          "styled-components"
-        ],
-        [
-          "babel-plugin-root-import",
-          {
-            paths: [
-              {
-                rootPathPrefix: '@',
-                rootPathSuffix: 'src'
-              }
-            ]
-          }
-        ]
-      ]
-    }
-  }
+  ]
 };
